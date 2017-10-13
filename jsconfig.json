@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "target": "ES6"
+    },
+    esversion:6
+}
