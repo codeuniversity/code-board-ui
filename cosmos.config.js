@@ -6,4 +6,7 @@ module.exports = {
     publicPath: 'public',
     // Optional: Add this when you start using proxies
     // proxiesPath: 'src/cosmos.proxies'
+    globalImports: [
+      './src/styles/App.css'
+    ],
   };
