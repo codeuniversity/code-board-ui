@@ -4,6 +4,6 @@ export default {
 
     },
     children:(
-        <p>Hallo</p>
+        <p>Bla Bla</p>
     )
 }
