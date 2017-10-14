@@ -1,14 +1,14 @@
 import React from 'react';
-import './ListItem.css';
+import './Paper.css';
 
-class ListItem extends React.Component{
+class Paper extends React.Component{
     render(){
         let {className,children,...rest} = this.props;
         return(
-            <div className={`ListItem ${className || ""}`} {...rest}>
+            <div className={`Paper ${className || ""}`} {...rest}>
                 {children}
             </div>
         )
     }
 }
-export default ListItem;
+export default Paper;

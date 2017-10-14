@@ -1,7 +1,7 @@
 ## React cosmos
 `npm run cosmos`
 
-When you create a Component, make sure to add a fixture
+When you create a Component, make sure to add a fixture (and to restart cosmos)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

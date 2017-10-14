@@ -1,12 +1,16 @@
 .ListItem{
-    background-image: linear-gradient(to bottom, #4e4e4e, #2c2c2c);;
+    background: linear-gradient(to bottom, #4e4e4e, #101010);;
     color: white;
     font-weight: 400;
     padding: 0.5rem;
     border-radius: 3px; 
-    font-size: 1rem;
-    
+    font-size: 1.2rem;
+    line-height: 1rem;   
+    text-transform: uppercase;
 }
 .ListItem *{
     margin: 0 auto;
+}
+.ListItem.selected{
+    background: linear-gradient(to bottom,#98cdf9,#2f6fa5);
 }

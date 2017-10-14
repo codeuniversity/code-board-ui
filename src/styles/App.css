@@ -2,13 +2,14 @@ html{
   font-family: sans-serif;
   font-size: 3vw;
 }
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  text-align: center;
 }
 
 .App-header {
@@ -26,7 +27,38 @@ html{
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.split{
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.marginless{
+  margin: 0;
+}
+.middle{
+  margin: auto;
+}
+.distance-top{
+  margin-top: 10px;
+}
+.pad{
+  padding: 10px;
+}
+.tiny-font{
+  font-size: 0.5rem;
+}
+.small-font{
+  font-size: 0.7rem;
+}
+.normal-font{
+  font-size: 1rem;
+}
+.big-font{
+  font-size: 1.3rem;
 }
