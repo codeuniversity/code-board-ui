@@ -1,0 +1,25 @@
+.DiffHoriSplit{
+    background-color: #e2e2e2;
+}
+.DiffHoriSplit .main{
+    height: 75vh;
+}
+.DiffHoriSplit .main .third{
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+}
+.DiffHoriSplit .bottom{
+    height: 25vh;
+}
+.DiffHoriSplit .bottom .bottomItem{
+    width: calc(100% / 6);
+    display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+}   
+.DiffHoriSplit .vertical-center{
+    margin-top: 18vh;
+    padding: 10px 5px;
+}

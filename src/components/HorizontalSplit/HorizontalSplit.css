@@ -1,0 +1,45 @@
+.HorizontalSplit{
+    background-color: #ebebeb;
+}
+.HorizontalSplit .top{
+    height: 75vh;
+    padding: 0;
+}
+.HorizontalSplit .bottom{
+    height: 25vh;
+}
+.HorizontalSplit .bottom .bottomItem{
+    display: inline-block;
+    height: 100%;
+    width: calc(100% / 6 );
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 0.9rem;
+    line-height: 17vh;
+}                 
+.HorizontalSplit .top .header{
+    height: 30%;
+    background: #7d8673;
+}
+.HorizontalSplit .top .main{
+    height: 70%;
+    padding: 10px;
+}
+.HorizontalSplit .top .main .space{
+    height: calc(100% - 40px);
+    text-align: center;
+}
+.HorizontalSplit .top .header .split{
+    border: 1px solid white;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+.HorizontalSplit .top .header .split *{
+    line-height: 20vh;
+    
+}
+h1, h2, h3,h4{
+    margin: 0;
+}
