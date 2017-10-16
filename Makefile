@@ -12,7 +12,9 @@ all:
 	@echo "import './$(component).css';" >> src/components/$(component)/$(component).js
 	@echo "" >> src/components/$(component)/$(component).js
 	@echo "class $(component) extends React.Component{" >> src/components/$(component)/$(component).js
-	@echo "	render(){}" >> src/components/$(component)/$(component).js
+	@echo "	render(){" >> src/components/$(component)/$(component).js
+	@echo "		return(<div></div>)" >> src/components/$(component)/$(component).js
+	@echo "	}" >> src/components/$(component)/$(component).js
 	@echo "}" >> src/components/$(component)/$(component).js
 	@echo "export default $(component)" >> src/components/$(component)/$(component).js 
 	@echo "Built Component '$(component)' "
