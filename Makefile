@@ -7,7 +7,7 @@ all:
 	@echo "export default {" >> src/components/__fixtures__/$(component)/$(component)Fix.js
 	@echo "	props:{}," >> src/components/__fixtures__/$(component)/$(component)Fix.js
 	@echo "	state:{}," >> src/components/__fixtures__/$(component)/$(component)Fix.js
-	@echo "	children:null" >> src/components/__fixtures__/$(component)/$(component)Fix.js
+	@echo "	children:null}" >> src/components/__fixtures__/$(component)/$(component)Fix.js
 	@echo "import React from 'react';" >> src/components/$(component)/$(component).js
 	@echo "import './$(component).css';" >> src/components/$(component)/$(component).js
 	@echo "" >> src/components/$(component)/$(component).js
