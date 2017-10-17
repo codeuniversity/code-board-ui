@@ -1,6 +1,5 @@
 .SlackMessage{
     overflow: auto;
-    display: inline-block;
 }
 .SlackMessage .profile-pic{
     width: 40px;
