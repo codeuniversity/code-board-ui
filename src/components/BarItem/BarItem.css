@@ -1,0 +1,12 @@
+.BarItem{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.BarItem .Paper{
+    box-sizing: border-box;
+    height: 100%;
+}

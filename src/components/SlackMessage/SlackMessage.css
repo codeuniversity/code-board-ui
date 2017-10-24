@@ -1,7 +1,17 @@
 .SlackMessage{
-    overflow: auto;
+    overflow: hidden;
+    font-size: 0.7rem;
+    height: 100%;
+    line-height: 0.8rem;
+    box-sizing: border-box;
+    padding: 5px;
 }
 .SlackMessage .profile-pic{
-    width: 40px;
+    height: 100%;
     float: left;
+}
+.SlackMessage-container{
+    height: calc(100% / 6 - 10px + 10px / 6);
+    padding: 0;
+    margin-bottom: 10px;
 }

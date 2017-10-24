@@ -1,0 +1,35 @@
+.Dashboard{
+
+}
+.Dashboard .main{
+    display: flex;
+    height: 70vh;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.Dashboard .bottom {
+    height: 30vh;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box; 
+    display: flex;   
+    font-size: 0.7rem;
+}
+.Dashboard .main .flex-item{
+    flex-basis: 0;
+    height: 100%;
+    box-sizing: border-box;    
+}
+.Dashboard .main .flex-item .flex-container{
+    height: 100%;
+}
+.Dashboard .main .flex-item .main-event{
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box; 
+}
+.Dashboard .main .flex-item .slack-messages{
+    height: 100%;
+    text-align: center; 
+}

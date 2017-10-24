@@ -22,7 +22,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
           <List>
-            {this.state.messages.map((message)=>{
+            {this.state.messages.reverse().map((message)=>{
               return ( <div className="distance-top"><SlackMessage message={message}/></div>)
             })}
           </List>

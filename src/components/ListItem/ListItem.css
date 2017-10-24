@@ -1,7 +1,7 @@
 .ListItem{
     /* background: linear-gradient(to bottom, #4e4e4e, #101010); */
-    background:linear-gradient(to bottom, #473e32, #0a0a08);  
-    color: white;
+    /* background:linear-gradient(to bottom, #473e32, #0a0a08);   */
+    /* color: white; */
     font-weight: 400;
     padding: 0.5rem;
     border-radius: 3px; 
@@ -9,8 +9,9 @@
     line-height: 1rem;   
     text-transform: uppercase;
 }
-.ListItem *{
+.ListItem .Paper{
     margin: 0 auto;
+    height: 100%;
 }
 .ListItem.selected{
     background: linear-gradient(to bottom,#98cdf9,#2f6fa5);
