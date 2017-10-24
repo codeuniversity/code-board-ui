@@ -40,13 +40,18 @@ class Dashboard extends React.Component{
 			return timeStampA-timeStampB;
 		});
 		let firstEvents = [];
-		for (let i = 0; i < 2 && i < sortedEvents.length; i++) {
-			 firstEvents.push(sortedEvents[i]);
+		let tmp_length = sortedEvents.length;
+		for (let i = 0; i < 2 && i < tmp_length; i++) {
+			 firstEvents.push(sortedEvents.shift());
 		}
 		let firstSlackMessages = [];
 		for (let i = 0; i < 6 && i < sortedSlackMessages.length; i++) {
 			firstSlackMessages.push(sortedSlackMessages[i]);
 	   }
+	   let firstSixEvents = [];
+	   for (let i = 0; i < 6 && i < sortedEvents.length; i++) {
+		firstSixEvents.push(sortedEvents[i]);
+   }
 		return(
 			<div className="Dashboard">
 				<div className="main">
@@ -69,7 +74,7 @@ class Dashboard extends React.Component{
 					</div>
 				</div>
 				<div className="bottom">
-					{sortedEvents.map((event)=>(
+					{firstSixEvents.map((event)=>(
 						
 						<BarItem>
 							<CalendarItem event={event} />

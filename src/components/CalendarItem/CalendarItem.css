@@ -1,6 +1,18 @@
 .CalendarItem{
-
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+.CalendarItem.deleted{
+    text-decoration: line-through;
+}
+.CalendarItem.updated{
 }
 .CalendarItem .time{
     font-size: 0.3rem;
+    color:grey;
+    position: absolute;
+    bottom:0;
+    right: 0;
+    /* text-align: right; */
 }
