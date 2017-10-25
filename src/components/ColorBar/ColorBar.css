@@ -1,0 +1,28 @@
+.ColorBar{
+    padding: 0;
+    height: 5vh;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.ColorBar .left{
+    width: 50%;
+    height: 5px;
+    margin-top: calc(2.5vh - 2.5px); 
+    /* background-color: green;  */
+}
+.ColorBar .right{
+    width: 50%;
+    height: 5px;
+    margin-top: calc(2.5vh - 2.5px); 
+    /* background-color: red;  */
+}
+.ColorBar .circle{
+    position: absolute;
+    top: calc(2.5vh - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    /* background-color: black; */
+}

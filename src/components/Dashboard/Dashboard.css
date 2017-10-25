@@ -3,13 +3,13 @@
 }
 .Dashboard .main{
     display: flex;
-    height: 70vh;
+    height: 65vh;
     margin: 0;
     padding: 0 10px;
     box-sizing: border-box;
 }
 .Dashboard .bottom {
-    height: 30vh;
+    height: 35vh;
     margin: 0;
     padding: 0 10px;
     box-sizing: border-box; 
@@ -32,4 +32,8 @@
 .Dashboard .main .flex-item .annoucements{
     height: 100%;
     text-align: center; 
+}
+.Dashboard .bottom .BarItem-container{
+    flex-grow: 1;
+    flex-basis: 0;
 }

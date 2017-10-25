@@ -8,6 +8,7 @@ import BarItem from '../BarItem/BarItem';
 import CalendarItem from '../CalendarItem/CalendarItem';
 import DelayMessage from '../DelayMessage/DelayMessage';
 import DetailedCalendarItem from '../DetailedCalendarItem/DetailedCalendarItem';
+import ColorBar from '../ColorBar/ColorBar';
 const endpoint = 'http://localhost:4001';
 
 class Dashboard extends React.Component{
@@ -69,7 +70,12 @@ class Dashboard extends React.Component{
 	   let firstSixEvents = [];
 	   for (let i = 0; i < 6 && i < sortedEvents.length; i++) {
 		firstSixEvents.push(sortedEvents[i]);
-   }
+		   }
+		   let startDate, endDate;
+		if(firstSixEvents.length > 0){
+			startDate = firstSixEvents[0].start.dateTime;
+			endDate = firstSixEvents[firstSixEvents.length-1].end.dateTime;			
+		}
 		return(
 			<div className="Dashboard">
 				<div className="main">
@@ -89,11 +95,13 @@ class Dashboard extends React.Component{
 					</div>
 				</div>
 				<div className="bottom">
-					{firstSixEvents.map((event)=>(
-						
-						<BarItem>
-							<CalendarItem event={event} />
-						</BarItem>
+					{firstSixEvents.map((event, index)=>(
+						<div className="BarItem-container">
+							<ColorBar events={firstSixEvents} index={index} start={startDate} end={endDate}/>
+							<BarItem>
+								<CalendarItem event={event} />
+							</BarItem>
+						</div>
 					))}
 				</div>
 			</div>
