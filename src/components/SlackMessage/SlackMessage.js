@@ -1,6 +1,7 @@
 import React from 'react';
 import './SlackMessage.css';
 import Paper from '../Paper/Paper';
+import VerticalCenter from '../VerticalCenter/VerticalCenter';
 
 class SlackMessage extends React.Component{
 	render(){
@@ -8,11 +9,10 @@ class SlackMessage extends React.Component{
 		return(
 			<div className="SlackMessage-container">
 				<Paper className={`SlackMessage ${className || ''}`} {...rest}>
-							<img src={message.user.profile.medium_image_url} alt="img" className="profile-pic"/>
-							<span className="text-container">
+							<img src={message.user.profile.large_image_url} alt="img" className="profile-pic"/>
+							<VerticalCenter>
 								<span className="text">{message.text}</span>
-							</span>
-							
+							</VerticalCenter>
 				</Paper>
 			</div>
 

@@ -6,6 +6,8 @@
     box-sizing: border-box;
     padding: 20px 5px;
     text-align: center;
+    background: #ec2666;
+    color: white;
 }
 .DelayMessage-container{
     height: calc(100% / 3 - 10px + 10px / 3);
@@ -22,5 +24,7 @@
 
 }
 .DelayMessage .delay{
-    color: red;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+    color:#bd6909;
 }

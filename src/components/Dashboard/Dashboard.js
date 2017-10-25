@@ -7,6 +7,7 @@ import SlackMessage from '../SlackMessage/SlackMessage';
 import BarItem from '../BarItem/BarItem';
 import CalendarItem from '../CalendarItem/CalendarItem';
 import DelayMessage from '../DelayMessage/DelayMessage';
+import DetailedCalendarItem from '../DetailedCalendarItem/DetailedCalendarItem';
 const endpoint = 'http://localhost:4001';
 
 class Dashboard extends React.Component{
@@ -54,8 +55,8 @@ class Dashboard extends React.Component{
 		
 	}
 	render(){
-		let {slackMessages,events,delays} = this.state;
-		console.log(delays);
+		let {events} = this.state;
+		console.log(events);
 		let sortedEvents = events.slice().sort((a,b)=>{
 			let timeStampA = new Date(a.start.dateTime).valueOf();
 			let timeStampB = new Date(b.start.dateTime).valueOf();
@@ -77,10 +78,7 @@ class Dashboard extends React.Component{
 						<div className="main-event flex-container">
 						{firstEvents.map((event)=>(
 						<div className="flex-item flex-1 pad">
-							<Paper className="main-event">
-								<h4>{event.summary}</h4>
-								<p>{event.description}</p>
-							</Paper>
+							<DetailedCalendarItem event={event}/>
 						</div>	
 						))}
 						</div>

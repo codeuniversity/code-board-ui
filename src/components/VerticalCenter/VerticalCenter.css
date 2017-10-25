@@ -1,0 +1,11 @@
+.VerticalCenter{
+    display: table;
+    height: 100%;
+    /* width: 100%; */
+    /* margin: auto; */
+}
+.VerticalCenter .child{
+    display: table-cell;
+    vertical-align: middle;
+    line-height: normal;
+}

@@ -2,6 +2,8 @@
     position: relative;
     height: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    font-size: 0.59rem;
 }
 .CalendarItem.deleted{
     text-decoration: line-through;
@@ -9,10 +11,9 @@
 .CalendarItem.updated{
 }
 .CalendarItem .time{
-    font-size: 0.3rem;
-    color:grey;
-    position: absolute;
-    bottom:0;
-    right: 0;
-    /* text-align: right; */
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+.CalendarItem .location{
+    font-weight: 400;
 }
