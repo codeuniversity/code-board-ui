@@ -2,9 +2,6 @@ import React from 'react';
 import './Timer.css';
 
 class Timer extends React.Component{
-	state={
-		dateNow: new Date(),
-	}
 	getDifference(dateNow, date){
 		let timeNow = dateNow.getTime();
 		let diffTime = date.getTime();
@@ -38,18 +35,9 @@ class Timer extends React.Component{
 		}
 		return Math.floor(seconds) + "s";
 	}
-	componentDidMount(){
-		this.interval = setInterval(this.updateTime,1000);
-	}
-	updateTime=()=>{
-		this.setState({dateNow:new Date()});
-	}
-	componentWillUnmount(){
-		clearInterval(this.interval);
-	}
 	render(){
 		let {className,time,...rest} = this.props;
-		let dateNow = this.state.dateNow;
+		let dateNow = this.props.now;
 		return(
 			<div className={`Timer ${className || ''}`}>
 				<span> in {this.getDifference(dateNow,time)}</span>

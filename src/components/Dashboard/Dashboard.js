@@ -56,7 +56,6 @@ class Dashboard extends React.Component{
 	}
 	render(){
 		let {events} = this.state;
-		console.log(events);
 		let sortedEvents = events.slice().sort((a,b)=>{
 			let timeStampA = new Date(a.start.dateTime).valueOf();
 			let timeStampB = new Date(b.start.dateTime).valueOf();
