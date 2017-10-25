@@ -22,7 +22,7 @@ class CalendarItem extends React.Component{
 	render(){
 		let {event,className,...rest} = this.props;
 		return(
-			<div className={`CalendarItem ${this.isDeleted() ? 'deleted' : '' } ${this.isUpdated() ? 'updated' : '' }`}>
+			<div className={`CalendarItem ${this.isDeleted() ? 'deleted' : '' } ${this.isUpdated() ? 'updated' : '' }`} {...rest}>
 				<h4 className="marginless">{event.summary}</h4>
 				<div className="time">
 					<span >{new Date(event.start.dateTime).toLocaleString()}</span>

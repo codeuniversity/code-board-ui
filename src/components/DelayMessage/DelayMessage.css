@@ -1,0 +1,26 @@
+.DelayMessage{
+    overflow: hidden;
+    font-size: 0.7rem;
+    height: 100%;
+    /* line-height: 1.2rem; */
+    box-sizing: border-box;
+    padding: 20px 5px;
+    text-align: center;
+}
+.DelayMessage-container{
+    height: calc(100% / 3 - 10px + 10px / 3);
+    padding: 0;
+    margin-bottom: 10px;
+}
+.DelayMessage .name{
+
+}
+.DelayMessage .direction{
+    font-weight: 400;
+}
+.DelayMessage .departure{
+
+}
+.DelayMessage .delay{
+    color: red;
+}
