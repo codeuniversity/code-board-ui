@@ -29,9 +29,8 @@ class CalendarItem extends React.Component{
 		return(
 			<div className={`CalendarItem ${this.isDeleted() ? 'deleted' : '' } ${this.isUpdated() ? 'updated' : '' }`} {...rest}>
 				<VerticalCenter className="middle">
-					<h4 className="marginless">{event.summary}</h4>
+					<h5 className="marginless">{event.summary}</h5>
 					<span className="time more-dist-top">
-						{/* <span >{new Date(event.start.dateTime).toLocaleString()}</span> */}
 						{this.getNiceStart()}
 					</span>
 					<h5 className="marginless distance-top location">{event.location}</h5>

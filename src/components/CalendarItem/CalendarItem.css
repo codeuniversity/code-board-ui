@@ -11,7 +11,7 @@
 .CalendarItem.updated{
 }
 .CalendarItem .time{
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     font-weight: 600;
 }
 .CalendarItem .location{

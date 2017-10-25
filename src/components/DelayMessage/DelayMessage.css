@@ -21,10 +21,11 @@
     font-weight: 400;
 }
 .DelayMessage .departure{
-
+    line-height: 0.8rem;
 }
 .DelayMessage .delay{
     font-size: 1.2rem;
+    line-height: 0.8rem;
     text-shadow: 1px 1px 1px black;
     color:#bd6909;
 }
