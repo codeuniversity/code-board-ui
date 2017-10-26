@@ -3,6 +3,7 @@
     box-sizing: border-box;
     position: relative;
     padding: 0 5px;
+    text-align: center;
 }
 .DetailedCalendarItem .summary{
     line-height: 1rem;

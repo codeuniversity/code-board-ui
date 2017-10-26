@@ -1,0 +1,15 @@
+.MainCalendarSlider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.MainCalendarSlider .slide-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    box-sizing: border-box;
+    transition: transform 2000ms;
+    /* height: 100%; */
+}
