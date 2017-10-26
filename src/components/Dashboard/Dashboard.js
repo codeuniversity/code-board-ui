@@ -82,8 +82,7 @@ class Dashboard extends React.Component{
 			<div className="Dashboard">
 				<div className="main">
 					<div className="flex-item flex-2">
-							<MainCalendarSlider events={firstEvents}/>
-
+						<MainCalendarSlider events={firstEvents}/>
 					</div>
 					<div className="flex-item flex-1 pad">
 						<div className="annoucements">

@@ -48,6 +48,7 @@
 .Dashboard .main .flex-item .annoucements .foreground{
     position: relative;
     z-index: 100;
+    height: 100%;
 }
 .Dashboard .bottom .BarItem-container{
     flex-grow: 1;
