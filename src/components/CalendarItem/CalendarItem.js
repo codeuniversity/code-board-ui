@@ -2,6 +2,7 @@ import React from 'react';
 import './CalendarItem.css';
 import VerticalCenter from '../VerticalCenter/VerticalCenter';
 import utils from '../../utils';
+import LimitedText from '../LimitedText/LimitedText';
 class CalendarItem extends React.Component{
 	isDeleted(){
 		let description = this.props.event.description;
@@ -33,7 +34,7 @@ class CalendarItem extends React.Component{
 					<span className="time more-dist-top">
 						{this.getNiceStart()}
 					</span>
-					<h5 className="location">{event.location}</h5>
+					<h5 className="location"><LimitedText text={event.location} limit={15}/></h5>
 				</VerticalCenter>
 			</div>
 		)

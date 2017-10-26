@@ -29,7 +29,6 @@ class MainCalendarSlider extends React.Component{
 		let {className,events,...rest} = this.props;
 		let eventsItems = events.map((event, index)=>{
 			let effectiveIndex = this.getEffectiveIndex(index);
-			console.log(effectiveIndex);
 			return (
 				<div className="slide-child pad" style={{transform:`translate(${effectiveIndex*100}%)`,zIndex:40-effectiveIndex}}>
 						<DetailedCalendarItem event={event}/>

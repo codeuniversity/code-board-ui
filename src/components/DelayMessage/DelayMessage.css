@@ -18,7 +18,8 @@
 
 }
 .DelayMessage .direction{
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 0.45rem;
 }
 .DelayMessage .departure{
     line-height: 0.8rem;
@@ -28,4 +29,8 @@
     line-height: 0.8rem;
     text-shadow: 1px 1px 1px black;
     color:#bd6909;
+}
+.DelayMessage .station{
+    font-size: 0.45rem;
+    font-weight: 200;
 }

@@ -4,6 +4,7 @@ import Paper from '../Paper/Paper';
 import utils from '../../utils';
 import VerticalCenter from '../VerticalCenter/VerticalCenter';
 import Timer from '../Timer/Timer';
+import LimitedText from '../LimitedText/LimitedText';
 class DetailedCalendarItem extends React.Component{
 	state={
 		dateNow:new Date(),
@@ -43,8 +44,8 @@ class DetailedCalendarItem extends React.Component{
 			<Paper className={`DetailedCalendarItem ${className || ''}`} {...rest}>
 				<VerticalCenter className="middle">
 					<h4 className="marginless summary">{event.summary}</h4>
-					<h6 className="marginless distance-top">{event.description}</h6>
-					<h5 className="marginless location">{event.location}</h5>
+					{/* <h6 className="marginless distance-top">{event.description}</h6> */}
+					<h5 className="marginless location"><LimitedText text={event.location}/></h5>
 					{this.showTimeIndicator()}
 					<p className="marginless time light">
 						{/* <span >{new Date(event.start.dateTime).toLocaleString()}</span> */}

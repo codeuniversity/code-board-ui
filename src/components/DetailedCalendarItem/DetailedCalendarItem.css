@@ -4,6 +4,7 @@
     position: relative;
     padding: 0 5px;
     text-align: center;
+    overflow: hidden;
 }
 .DetailedCalendarItem .summary{
     line-height: 1rem;
