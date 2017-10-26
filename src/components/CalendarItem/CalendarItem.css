@@ -3,12 +3,8 @@
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
-<<<<<<< HEAD
-    font-size: 0.3rem;
-=======
     font-size: 0.59rem;
     text-transform: uppercase;
->>>>>>> design
 }
 
 .CalendarItem h5 {
