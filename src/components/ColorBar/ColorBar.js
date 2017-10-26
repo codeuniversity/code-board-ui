@@ -47,12 +47,22 @@ class ColorBar extends React.Component{
 		
 	}
 	render(){
-		let {event} = this.props;		
+		let {event,index,totalLength,events} = this.props;	
+		let left,right;
+		// console.log(index);
+		if(index !== 0){
+			left = (<div className="left" style={{backgroundImage:getGradient(this.getStartColor(),this.getMiddleColor())}}></div>)
+		}
+		console.log(events.length);
+		console.log(totalLength);
+		if(index !== events.length-1 || events.length !== totalLength){
+			right = (<div className="right" style={{backgroundImage:getGradient(this.getMiddleColor(),this.getEndColor())}}></div>)
+		}
 		return(
 			<div className="ColorBar">
-				<div className="left" style={{backgroundImage:getGradient(this.getStartColor(),this.getMiddleColor())}}></div>
-				<div className="right" style={{backgroundImage:getGradient(this.getMiddleColor(),this.getEndColor())}}></div>
+				{left}
 				<div className="circle" style={{background:this.getMiddleColor()}}></div>
+				{right}
 			</div>
 		)
 	}

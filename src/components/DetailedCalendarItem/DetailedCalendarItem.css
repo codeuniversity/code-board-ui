@@ -2,6 +2,13 @@
     height: 100%;
     box-sizing: border-box;
     position: relative;
+    padding: 0 5px;
+}
+.DetailedCalendarItem .summary{
+    line-height: 1rem;
+}
+.DetailedCalendarItem .location{
+    line-height: 1rem;
 }
 .DetailedCalendarItem .progress-bar{
     position: absolute;

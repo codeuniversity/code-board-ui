@@ -62,6 +62,7 @@ class Dashboard extends React.Component{
 			let timeStampB = new Date(b.start.dateTime).valueOf();
 			return timeStampA-timeStampB;
 		});
+		let totalEventLength = sortedEvents.length;
 		let firstEvents = [];
 		let tmp_length = sortedEvents.length;
 		for (let i = 0; i < 2 && i < tmp_length; i++) {
@@ -97,7 +98,7 @@ class Dashboard extends React.Component{
 				<div className="bottom">
 					{firstSixEvents.map((event, index)=>(
 						<div className="BarItem-container">
-							<ColorBar events={firstSixEvents} index={index} start={startDate} end={endDate}/>
+							<ColorBar events={firstSixEvents} index={index} start={startDate} end={endDate} totalLength={totalEventLength-firstEvents.length}/>
 							<BarItem>
 								<CalendarItem event={event} />
 							</BarItem>
