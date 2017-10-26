@@ -9,6 +9,7 @@ import CalendarItem from '../CalendarItem/CalendarItem';
 import DelayMessage from '../DelayMessage/DelayMessage';
 import DetailedCalendarItem from '../DetailedCalendarItem/DetailedCalendarItem';
 import ColorBar from '../ColorBar/ColorBar';
+import MainCalendarSlider from '../MainCalendarSlider/MainCalendarSlider';
 const endpoint = 'http://localhost:4001';
 
 class Dashboard extends React.Component{
@@ -65,7 +66,7 @@ class Dashboard extends React.Component{
 		let totalEventLength = sortedEvents.length;
 		let firstEvents = [];
 		let tmp_length = sortedEvents.length;
-		for (let i = 0; i < 2 && i < tmp_length; i++) {
+		for (let i = 0; i < 3 && i < tmp_length; i++) {
 			 firstEvents.push(sortedEvents.shift());
 		}
 	   let firstSixEvents = [];
@@ -81,17 +82,15 @@ class Dashboard extends React.Component{
 			<div className="Dashboard">
 				<div className="main">
 					<div className="flex-item flex-2">
-						<div className="main-event flex-container">
-						{firstEvents.map((event)=>(
-						<div className="flex-item flex-1 pad">
-							<DetailedCalendarItem event={event}/>
-						</div>	
-						))}
-						</div>
+							<MainCalendarSlider events={firstEvents}/>
+
 					</div>
 					<div className="flex-item flex-1 pad">
 						<div className="annoucements">
-							{this.getAnnouncements()}							
+							<div className="background"></div>
+							<div className="foreground">
+								{this.getAnnouncements()}							
+							</div>
 						</div>
 					</div>
 				</div>

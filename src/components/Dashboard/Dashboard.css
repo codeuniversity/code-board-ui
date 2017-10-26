@@ -30,8 +30,24 @@
     box-sizing: border-box; 
 }
 .Dashboard .main .flex-item .annoucements{
+    position: relative;
+    z-index: 100;
     height: 100%;
     text-align: center; 
+}
+.Dashboard .main .flex-item .annoucements .background{
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(241, 241, 241, 0.506),#f1f1f1);
+    filter: blur(10px);
+}
+.Dashboard .main .flex-item .annoucements .foreground{
+    position: relative;
+    z-index: 100;
 }
 .Dashboard .bottom .BarItem-container{
     flex-grow: 1;
