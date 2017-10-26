@@ -70,7 +70,7 @@ class Dashboard extends React.Component{
 			 firstEvents.push(sortedEvents.shift());
 		}
 	   let firstSixEvents = [];
-	   for (let i = 0; i < 6 && i < sortedEvents.length; i++) {
+	   for (let i = 0; i < 5 && i < sortedEvents.length; i++) {
 		firstSixEvents.push(sortedEvents[i]);
 		   }
 		   let startDate, endDate;
@@ -95,7 +95,7 @@ class Dashboard extends React.Component{
 				</div>
 				<div className="bottom">
 					{firstSixEvents.map((event, index)=>(
-						<div className="BarItem-container">
+						<div className={`BarItem-container ${index===0 ? 'up-next' : ''}`}>
 							<ColorBar events={firstSixEvents} index={index} start={startDate} end={endDate} totalLength={totalEventLength-firstEvents.length}/>
 							<BarItem>
 								<CalendarItem event={event} />

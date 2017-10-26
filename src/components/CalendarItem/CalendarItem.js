@@ -33,7 +33,7 @@ class CalendarItem extends React.Component{
 					<span className="time more-dist-top">
 						{this.getNiceStart()}
 					</span>
-					<h5 className="marginless distance-top location">{event.location}</h5>
+					<h5 className="location">{event.location}</h5>
 				</VerticalCenter>
 			</div>
 		)
