@@ -6,7 +6,7 @@ class CalendarItem extends React.Component{
 	isDeleted(){
 		let description = this.props.event.description;
 		if(description){
-			return !(description.indexOf('delete') < 0);			
+			return !(description.indexOf('delete') < 0);
 		}else{
 			return false;
 		}
