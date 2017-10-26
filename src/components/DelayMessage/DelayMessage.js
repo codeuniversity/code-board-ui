@@ -3,6 +3,7 @@ import './DelayMessage.css';
 import Paper from '../Paper/Paper';
 import VerticalCenter from '../VerticalCenter/VerticalCenter';
 import utils from '../../utils';
+import LimitedText from '../LimitedText/LimitedText';
 class DelayMessage extends React.Component{
 	getNiceDeparture(){
 		let time = new Date(this.props.message.departureTime)
@@ -20,7 +21,7 @@ class DelayMessage extends React.Component{
 			<div className="DelayMessage-container">
 				<Paper className={`DelayMessage ${className || ''}`} {...rest}>
 					<VerticalCenter className="middle">
-						<h4 className="name marginless">{this.getName()} <span className="direction">{message.direction}</span></h4>
+						<h4 className="name marginless">{this.getName()} <span className="direction"><LimitedText text={message.direction} limit={10}/></span></h4>
 						<h6 className="direction marginless"></h6>
 						<h6 className="station marginless">{message.stationName}</h6>
 						<h3 className="departure marginless">
