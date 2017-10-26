@@ -11,7 +11,6 @@
 .Dashboard .bottom {
     height: 35vh;
     margin: 0;
-    padding: 0 10px;
     box-sizing: border-box; 
     display: flex;   
     font-size: 0.7rem;
@@ -36,4 +35,5 @@
 .Dashboard .bottom .BarItem-container{
     flex-grow: 1;
     flex-basis: 0;
+    overflow: hidden;
 }

@@ -4,16 +4,50 @@
     box-sizing: border-box;
     overflow: hidden;
     font-size: 0.59rem;
+    text-transform: uppercase;
 }
+
+.CalendarItem h5 {
+    font-size: .6rem;
+    line-height: .6rem;
+    letter-spacing: 1px;
+}
+
+.CalendarItem .marginless {
+    height: 15vh;
+    padding-top: .2rem;
+}
+
+.CalendarItem .VerticalCenter {
+    width: 320px;
+}
+
 .CalendarItem.deleted{
     text-decoration: line-through;
 }
-.CalendarItem.updated{
+
+.CalendarItem .VerticalCenter .child {
+    display: block;
 }
+
 .CalendarItem .time{
-    font-size: 0.5rem;
+    font-size: 0.45rem;
     font-weight: 600;
 }
 .CalendarItem .location{
     font-weight: 400;
+    font-size: 0.35rem;    
 }
+
+.CalendarItem .location {
+    margin-top: 0px;
+    font-weight: 700;    
+}
+
+.up-next .Paper {
+    background-color: #4C4C4C;
+    color: white;
+    box-shadow: 0 2px 14px 0 rgba(0,0,0,0.50);  
+    z-index: 1000;  
+}
+
