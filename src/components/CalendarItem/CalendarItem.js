@@ -23,7 +23,7 @@ class CalendarItem extends React.Component{
 	getNiceStart(){
 		let event = this.props.event;
 		let time = new Date(event.start.dateTime);
-		return event.start.very_pretty || `${time.toLocaleDateString()}, ${time.getHours()}:${utils.getFormatedMinutes(time.getMinutes())}`;
+		return event.start.very_pretty || `${time.toLocaleDateString('de')}, ${time.getHours()}:${utils.getFormatedMinutes(time.getMinutes())}`;
 	}
 	render(){
 		let {event,className,...rest} = this.props;
