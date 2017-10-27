@@ -10,8 +10,10 @@ import DelayMessage from '../DelayMessage/DelayMessage';
 import DetailedCalendarItem from '../DetailedCalendarItem/DetailedCalendarItem';
 import ColorBar from '../ColorBar/ColorBar';
 import MainCalendarSlider from '../MainCalendarSlider/MainCalendarSlider';
-const endpoint = 'http://localhost:4001';
-
+let endpoint = 'https://code-board-api.herokuapp.com';
+if(process.env.NODE_ENV === 'development'){
+	endpoint = 'http://localhost:4001';
+}
 class Dashboard extends React.Component{
 	state = {
 		slackMessages:[],

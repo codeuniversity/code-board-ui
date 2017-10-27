@@ -41,7 +41,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to right, rgba(241, 241, 241, 0.9),#f1f1f1);
+    background-image: linear-gradient(to right, rgba(241, 241, 241, 0.95),#f1f1f1);
     filter: blur(10px);
 }
 .Dashboard .main .flex-item .annoucements .foreground{
