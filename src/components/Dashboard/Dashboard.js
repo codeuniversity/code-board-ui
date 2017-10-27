@@ -12,7 +12,7 @@ import ColorBar from '../ColorBar/ColorBar';
 import MainCalendarSlider from '../MainCalendarSlider/MainCalendarSlider';
 let endpoint = 'https://code-board-api.herokuapp.com';
 if(process.env.NODE_ENV === 'development'){
-	endpoint = 'http://localhost:4001';
+	// endpoint = 'http://localhost:4001';
 }
 class Dashboard extends React.Component{
 	state = {
@@ -60,9 +60,9 @@ class Dashboard extends React.Component{
 		return announcements;
 		
 	}
-	render(){
-		
-		let {events, emoji} = this.state;
+	getRelevantEvents(){
+		let {events} = this.state;
+
 		let sortedEvents = events.slice().sort((a,b)=>{
 			let timeStampA = new Date(a.start.dateTime).valueOf();
 			let timeStampB = new Date(b.start.dateTime).valueOf();
@@ -74,14 +74,32 @@ class Dashboard extends React.Component{
 		for (let i = 0; i < 3 && i < tmp_length; i++) {
 			 firstEvents.push(sortedEvents.shift());
 		}
-	   let firstSixEvents = [];
+
+		while(sortedEvents.length > 0 && isCloserThan(sortedEvents[0], firstEvents[0])){
+			firstEvents.shift();
+			firstEvents.push(sortedEvents.shift());
+		}
+
+	   let firstBottomEvents = [];
 	   for (let i = 0; i < 5 && i < sortedEvents.length; i++) {
-		firstSixEvents.push(sortedEvents[i]);
-		   }
-		   let startDate, endDate;
-		if(firstSixEvents.length > 0){
-			startDate = firstSixEvents[0].start.dateTime;
-			endDate = firstSixEvents[firstSixEvents.length-1].end.dateTime;			
+			firstBottomEvents.push(sortedEvents[i]);
+		}
+
+
+
+
+		return {firstEvents, totalEventLength, firstBottomEvents};
+	}
+	
+	render(){
+		
+		let {events, emoji} = this.state;
+		
+		let {firstEvents, totalEventLength, firstBottomEvents} = this.getRelevantEvents();
+		let startDate, endDate;
+		if(firstBottomEvents.length > 0){
+			startDate = firstBottomEvents[0].start.dateTime;
+			endDate = firstBottomEvents[firstBottomEvents.length-1].end.dateTime;			
 		}
 		return(
 			<div className="Dashboard">
@@ -99,9 +117,9 @@ class Dashboard extends React.Component{
 					</div>
 				</div>
 				<div className="bottom">
-					{firstSixEvents.map((event, index)=>(
+					{firstBottomEvents.map((event, index)=>(
 						<div className={`BarItem-container ${index===0 ? 'up-next' : ''}`}>
-							<ColorBar events={firstSixEvents} index={index} start={startDate} end={endDate} totalLength={totalEventLength-firstEvents.length}/>
+							<ColorBar events={firstBottomEvents} index={index} start={startDate} end={endDate} totalLength={totalEventLength-firstEvents.length}/>
 							<BarItem>
 								<CalendarItem event={event} />
 							</BarItem>
@@ -113,3 +131,13 @@ class Dashboard extends React.Component{
 	}
 }
 export default Dashboard
+
+
+function isCloserThan(event1, event2){
+	let now = new Date();
+	let time1 = new Date(event1.start.dateTime);
+	let time2 = new Date(event2.start.dateTime);
+	let dif1 = Math.abs(time1-now);
+	let dif2 = Math.abs(time2-now);
+	return dif1 < dif2;
+}

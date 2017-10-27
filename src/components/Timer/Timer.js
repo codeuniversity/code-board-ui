@@ -26,12 +26,13 @@ class Timer extends React.Component{
 		interval = Math.floor(seconds / 3600);
 		if (interval >= 1) {
 	
-			return interval + " h";
+			return interval + "h";
 		}
 		interval = Math.floor(seconds / 60);
+		let rest = seconds % 60;
 		if (interval >= 1) {
 	
-			return interval + "min";
+			return `${interval}:${rest}min`;
 		}
 		return Math.floor(seconds) + "s";
 	}
@@ -40,7 +41,7 @@ class Timer extends React.Component{
 		let dateNow = this.props.now;
 		return(
 			<div className={`Timer ${className || ''}`}>
-				<span> in {this.getDifference(dateNow,time)}</span>
+				<span>{this.getDifference(dateNow,time)}</span>
 			</div>
 		)
 	}

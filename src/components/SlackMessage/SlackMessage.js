@@ -45,6 +45,11 @@ class SlackMessageText extends React.Component{
 }
 
 class SlackMessage extends React.Component{
+	getNiceTimeString(){
+		let time = new Date(this.props.message.createdAt);
+		let minutes = time.getMinutes().toString();
+		return `${time.getHours()}:${minutes.length > 1 ? minutes : '0'+minutes }`;
+	}
 	render(){
 		let {message,className,emoji,...rest}=this.props;
 		return(
@@ -53,6 +58,7 @@ class SlackMessage extends React.Component{
 							<img src={message.user.profile.large_image_url} alt="img" className="profile-pic"/>
 							<VerticalCenter>
 								<span className="text"> <SlackMessageText text={message.text} emoji={emoji}/> </span>
+								<span className="time">{this.getNiceTimeString()}</span>
 							</VerticalCenter>
 				</Paper>
 			</div>

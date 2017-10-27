@@ -7,6 +7,9 @@
     padding: 2px;
     text-align: left;
     font-weight: bold;
+    border-radius: 30px;
+    box-shadow: none;
+    position: relative;
 }
 .SlackMessage .profile-pic{
     height: 100%;
@@ -31,4 +34,12 @@
     height: calc(100% / 6 - 10px + 10px / 6);
     padding: 0;
     margin-bottom: 10px;
+}
+.SlackMessage .time{
+    color: lightgrey;
+    font-weight: 200;
+    font-size: 0.3rem;
+    position: absolute;
+    right: 1vw;
+    bottom: 0;
 }

@@ -5,6 +5,7 @@ import utils from '../../utils';
 import VerticalCenter from '../VerticalCenter/VerticalCenter';
 import Timer from '../Timer/Timer';
 import LimitedText from '../LimitedText/LimitedText';
+import logo from './code_logo.png';
 class DetailedCalendarItem extends React.Component{
 	state={
 		dateNow:new Date(),
@@ -12,7 +13,8 @@ class DetailedCalendarItem extends React.Component{
 	getNiceStart(){
 		let event = this.props.event;
 		let time = new Date(event.start.dateTime);
-		return event.start.very_pretty || `${time.toLocaleDateString()}, ${time.getHours()}:${utils.getFormatedMinutes(time.getMinutes())}`;
+		// return event.start.very_pretty || `${time.toLocaleDateString()}, ${time.getHours()}:${utils.getFormatedMinutes(time.getMinutes())}`;
+		return `${time.getHours()}:${utils.getFormatedMinutes(time.getMinutes())}`;
 	}
 	showTimeIndicator(){
 		let now = this.state.dateNow;
@@ -43,9 +45,10 @@ class DetailedCalendarItem extends React.Component{
 		return(
 			<Paper className={`DetailedCalendarItem ${className || ''}`} {...rest}>
 				<VerticalCenter className="middle">
+					<img src={logo} className="logo"/>
 					<h4 className="marginless summary">{event.summary}</h4>
 					{/* <h6 className="marginless distance-top">{event.description}</h6> */}
-					<h5 className="marginless location"><LimitedText text={event.location}/></h5>
+					<h5 className="marginless location distance-top"><LimitedText text={event.location}/></h5>
 					{this.showTimeIndicator()}
 					<p className="marginless time light">
 						{/* <span >{new Date(event.start.dateTime).toLocaleString()}</span> */}
