@@ -16,6 +16,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 5px;
-    background-color: green;
+    height: 15px;
+    background-color: rgb(126, 221, 126);
 }
