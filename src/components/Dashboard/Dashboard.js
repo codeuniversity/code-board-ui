@@ -17,12 +17,14 @@ class Dashboard extends React.Component{
 		slackMessages:[],
 		delays:[],
 		events:[],
+		emoji:{},
 	}
 	componentDidMount(){
 		this.socket = socketIOClient(endpoint);
 		this.socket.on('all_slack_messages',(messages)=>this.setState({slackMessages:messages}));
 		this.socket.on('all_calendar_messages',(events)=>this.setState({events:events}));
 		this.socket.on('all_delays',(delays)=>this.setState({delays:delays}));
+		this.socket.on('emoji',(emoji)=>this.setState({emoji}));
 		this.socket.on('slack_message',(message)=>{
 			this.setState({slackMessages:this.state.slackMessages.concat([message])})
 		});
@@ -32,7 +34,7 @@ class Dashboard extends React.Component{
 	
 	}
 	getAnnouncements(){
-		let {slackMessages,delays} = this.state;
+		let {slackMessages, delays, emoji} = this.state;
 		const annoucementCap = 6;
 		let currentAmount = 0;
 		let announcements = []; 
@@ -49,7 +51,7 @@ class Dashboard extends React.Component{
 		});
 		for(let i = 0; i < sortedSlackMessages.length && currentAmount<annoucementCap; i++){
 			let message = sortedSlackMessages[i];
-			announcements.push(<SlackMessage message={message}/>);
+			announcements.push(<SlackMessage message={message} emoji={emoji}/>);
 			currentAmount += 1;
 		}
 
@@ -57,7 +59,8 @@ class Dashboard extends React.Component{
 		
 	}
 	render(){
-		let {events} = this.state;
+		
+		let {events, emoji} = this.state;
 		let sortedEvents = events.slice().sort((a,b)=>{
 			let timeStampA = new Date(a.start.dateTime).valueOf();
 			let timeStampB = new Date(b.start.dateTime).valueOf();

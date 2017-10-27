@@ -15,6 +15,9 @@
     margin-right: 10px;
     /* display: inline-block; */
 }
+.SlackMessage .emoji-img{
+    max-height: 0.7rem;
+}
 .SlackMessage .text-container{
     display: table;
     height: 100%;
