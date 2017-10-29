@@ -6,7 +6,15 @@ function getFormatedMinutes(minutes){
 		return unformatedString;
 	}
 }
-
+function limitedText(text, limit){
+	let charCount = 0;
+	let wordArr = text.split(' ');
+	let newText = '';
+	for (var i = 0; i < wordArr.length && newText.length < limit; i++) {
+		newText += wordArr[i]+' ';
+	}
+	return `${newText} ${newText.length > limit ? '...': ''}`;
+}
 function lerpColor(a, b, amount) { 
 	
 		var ah = parseInt(a.replace(/#/g, ''), 16),
@@ -22,5 +30,6 @@ function lerpColor(a, b, amount) {
 
 export default {
 	getFormatedMinutes,
+	limitedText,
 	lerpColor,
 	};

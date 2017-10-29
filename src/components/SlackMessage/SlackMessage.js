@@ -3,6 +3,7 @@ import './SlackMessage.css';
 import Paper from '../Paper/Paper';
 import VerticalCenter from '../VerticalCenter/VerticalCenter';
 import LimitedText from '../LimitedText/LimitedText';
+import utils from '../../utils';
 
 class SlackMessageText extends React.Component{
 	hasEmoji(text, emoji){
@@ -57,7 +58,7 @@ class SlackMessage extends React.Component{
 				<Paper className={`SlackMessage ${className || ''}`} {...rest}>
 							<img src={message.user.profile.large_image_url} alt="img" className="profile-pic"/>
 							<VerticalCenter>
-								<span className="text"> <SlackMessageText text={message.text} emoji={emoji}/> </span>
+								<span className="text"> <SlackMessageText text={utils.limitedText(message.text, 60)} emoji={emoji}/> </span>
 								<span className="time">{this.getNiceTimeString()}</span>
 							</VerticalCenter>
 				</Paper>
