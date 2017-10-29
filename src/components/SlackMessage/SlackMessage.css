@@ -12,11 +12,12 @@
     position: relative;
 }
 .SlackMessage .profile-pic{
-    height: 100%;
+    height: 110%;
     width: auto;
     float: left;
-    margin-right: 10px;
-    /* display: inline-block; */
+    position: relative;
+    bottom:5%;
+    right: 1%;
 }
 .SlackMessage .emoji-img{
     max-height: 0.7rem;
