@@ -5,7 +5,7 @@
     /* line-height: 1.2rem; */
     box-sizing: border-box;
     padding: 0px;
-    text-align: center;
+    text-align: left;
     background: #ec2666;
     color: white;
 }
@@ -17,6 +17,7 @@
 .DelayMessage .name{
 
 }
+
 .DelayMessage .direction{
     font-weight: 200;
     font-size: 0.45rem;
@@ -27,8 +28,8 @@
 .DelayMessage .delay{
     font-size: 1.2rem;
     line-height: 0.8rem;
-    text-shadow: 1px 1px 1px black;
-    color:#bd6909;
+    color:white;
+    font-weight: 800;
 }
 .DelayMessage .station{
     font-size: 0.45rem;

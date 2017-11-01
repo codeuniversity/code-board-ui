@@ -8,9 +8,12 @@
 }
 .DetailedCalendarItem .summary{
     line-height: 1rem;
+    height: 18vh;
+    overflow: hidden;
 }
 .DetailedCalendarItem .location{
     line-height: 1rem;
+    height: 10vh;
 }
 .DetailedCalendarItem .progress-bar{
     position: absolute;
@@ -45,7 +48,7 @@
 
 .DetailedCalendarItem .location {
     line-height: .6rem;
-    text-align: left;    
+    text-align: left;
 }
 .DetailedCalendarItem .time{
     position: absolute;

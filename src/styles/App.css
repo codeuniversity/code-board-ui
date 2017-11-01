@@ -5,7 +5,7 @@ html{
 body {
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;  
+  background-color: #f1f1f1;
 }
 
 .App {
@@ -56,13 +56,16 @@ body {
   margin-bottom:1vh;
 }
 .more-dist-top{
-  margin-top: 3vh; 
+  margin-top: 3vh;
 }
 .pad{
   padding: 10px;
 }
 .padding{
   padding: 20px;
+}
+.left-margin{
+  margin-left: 0.7rem;
 }
 .tiny-font{
   font-size: 0.5rem;

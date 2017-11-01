@@ -2,7 +2,7 @@ import React from 'react';
 import './ColorBar.css';
 import utils from '../../utils';
 const beginningColor = '#7bc4dc';
-const endColor = '#78fb00';
+const endColor = '#7edd7e';
 
 class ColorBar extends React.Component{
 	getProgressOf(time){
@@ -11,7 +11,7 @@ class ColorBar extends React.Component{
 		let endDate = new Date(end)
 		let difference = endDate - beginningDate;
 		let point = time - beginningDate;
-		return point/difference; 
+		return point/difference;
 	}
 	getMiddleProgressOf(time1,time2){
 		let middle = (time1.valueOf()+time2.valueOf())/2
@@ -44,10 +44,10 @@ class ColorBar extends React.Component{
 		let time1 = new Date(event.end.dateTime);
 		let time2 = new Date(eventAfter.start.dateTime);
 		return getColorOf(this.getMiddleProgressOf(time1,time2));
-		
+
 	}
 	render(){
-		let {event,index,totalLength,events} = this.props;	
+		let {event,index,totalLength,events} = this.props;
 		let left,right;
 		// console.log(index);
 		if(index !== 0){
@@ -72,7 +72,7 @@ function getColorOf(progress){
 	return utils.lerpColor(beginningColor,endColor,progress);
 }
 function getGradient(color1,color2){
-	let str = `linear-gradient( to right,${color1} 0%,${color2} 100%)`; 
+	let str = `linear-gradient( to right,${color1} 0%,${color2} 100%)`;
 	// console.log(str);
 	return str;
 }

@@ -27,7 +27,7 @@ class DetailedCalendarItem extends React.Component{
 			return <Timer time={start} now={now}/>
 		}else{
 			let percentage = Math.round(progress / difference * 100);
-			return <div className="progress-bar" style={{width:`${percentage}%`}}></div> 
+			return <div className="progress-bar" style={{width:`${percentage}%`}}></div>
 		}
 	}
 	componentDidMount(){
@@ -46,7 +46,7 @@ class DetailedCalendarItem extends React.Component{
 			<Paper className={`DetailedCalendarItem ${className || ''}`} {...rest}>
 				<VerticalCenter className="middle">
 					<img src={logo} className="logo"/>
-					<h4 className="marginless summary">{event.summary}</h4>
+					<h4 className="marginless summary"><LimitedText text={event.summary} limit={30}/></h4>
 					{/* <h6 className="marginless distance-top">{event.description}</h6> */}
 					<h5 className="marginless location distance-top"><LimitedText text={event.location}/></h5>
 					{this.showTimeIndicator()}

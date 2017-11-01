@@ -20,10 +20,10 @@ class DelayMessage extends React.Component{
 		return(
 			<div className="DelayMessage-container">
 				<Paper className={`DelayMessage ${className || ''}`} {...rest}>
-					<VerticalCenter className="middle">
-						<h4 className="name marginless">{this.getName()} <span className="direction"><LimitedText text={message.direction} limit={10}/></span></h4>
-						<h6 className="direction marginless"></h6>
+				<VerticalCenter className="left-margin">
 						<h6 className="station marginless">{message.stationName}</h6>
+						<h4 className="name marginless">{this.getName()} <span className="direction">to <LimitedText text={message.direction} limit={14}/></span></h4>
+						<h6 className="direction marginless"></h6>
 						<h3 className="departure marginless">
 							{this.getNiceDeparture()} <span className="delay">+{message.delayInMinutes}</span>
 						</h3>
