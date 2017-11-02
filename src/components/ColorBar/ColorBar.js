@@ -1,8 +1,8 @@
 import React from 'react';
 import './ColorBar.css';
 import utils from '../../utils';
-const beginningColor = '#7bc4dc';
-const endColor = '#7edd7e';
+const beginningColor = '#5bc2fc';
+const endColor = '#78FFA0';
 
 class ColorBar extends React.Component{
 	getProgressOf(time){
